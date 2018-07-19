@@ -16,6 +16,7 @@
 		A2FD5B9020FEE15E00020BDA /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD5B8F20FEE15E00020BDA /* ToDoListUITests.swift */; };
 		A2FD5BAC20FF24FC00020BDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD5BAB20FF24FC00020BDA /* DetailViewController.swift */; };
 		A2FD5BAE21001CBB00020BDA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD5BAD21001CBB00020BDA /* AddViewController.swift */; };
+		A2FD5BB02100396300020BDA /* ApiIndexTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FD5BAF2100396300020BDA /* ApiIndexTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A2FD5B9120FEE15E00020BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2FD5BAB20FF24FC00020BDA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A2FD5BAD21001CBB00020BDA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		A2FD5BAF2100396300020BDA /* ApiIndexTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiIndexTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				A2FD5B7120FEE15B00020BDA /* ViewController.swift */,
 				A2FD5BAB20FF24FC00020BDA /* DetailViewController.swift */,
 				A2FD5B7320FEE15B00020BDA /* Main.storyboard */,
+				A2FD5BAF2100396300020BDA /* ApiIndexTableViewController.swift */,
 				A2FD5BAD21001CBB00020BDA /* AddViewController.swift */,
 				A2FD5B7620FEE15D00020BDA /* Assets.xcassets */,
 				A2FD5B7820FEE15D00020BDA /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 				A2FD5B7220FEE15B00020BDA /* ViewController.swift in Sources */,
 				A2FD5BAE21001CBB00020BDA /* AddViewController.swift in Sources */,
 				A2FD5B7020FEE15B00020BDA /* AppDelegate.swift in Sources */,
+				A2FD5BB02100396300020BDA /* ApiIndexTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
