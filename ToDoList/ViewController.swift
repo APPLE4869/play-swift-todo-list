@@ -20,8 +20,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.items = userDefaults.object(forKey: "items") as! Array<String>
+    }
+    
+    // 画面表示直前に呼ばれる処理
+    override func viewWillAppear(_ animated: Bool) {
+        reloadItems()
+        TableView.reloadData()
+    }
+    
+    // UserDefaultsからitemsを取得してインスタンス変数に格納する処理
+    func reloadItems() {
+        if userDefaults.object(forKey: "items") != nil {
+            self.items = userDefaults.object(forKey: "items") as! Array<String>
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    
+
     // セルの内容(オブジェクト)を返す
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // セルを取得する
