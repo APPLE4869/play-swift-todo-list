@@ -13,14 +13,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var TableView: UITableView!
     
     // ５種類のフルーツ
-    let fruits = ["apple", "orange", "melon", "banana", "pineapple"]
     var selectedCellText : String?
+    var items : Array<String> = []
+    let userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.items = userDefaults.object(forKey: "items") as! Array<String>
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,14 +44,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     // セルが選択された時の処理
     func tableView(_ table: UITableView,didSelectRowAt indexPath: IndexPath) {
-        self.selectedCellText = fruits[indexPath.row]
+        self.selectedCellText = items[indexPath.row]
         // ID「toDetail」というSegueを呼び出す
         performSegue(withIdentifier: "toDetail",sender: nil)
     }
 
     // Tableに表示するセルの数を返す
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruits.count
+        return items.count
     }
     
     // セルの内容(オブジェクト)を返す
@@ -57,7 +60,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "SampleCell", for: indexPath)
         
         // セルに表示する値を設定する
-        cell.textLabel!.text = fruits[indexPath.row]
+        cell.textLabel!.text = items[indexPath.row]
         
         return cell
     }
